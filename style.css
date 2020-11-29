@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+
+:root {
+  --color-primary: #333333;
+  --color-secondary: #4f4f4f;
+  --color-footer: #a9a9a9;
+  --color-font: #000000;
+  --color-background: #fafafa;
+
+  --font-pd: "Playfair Display", serif;
+  --font-mo: "Montserrat", sans-serif;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-font);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 95%;
+  height: 100vh;
+  margin: var(--space-lg) auto;
+}
+
+/* Header */
+
+.header__title {
+  font-family: var(--font-pd);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-bottom: var(--space-sm);
+}
+
+.header__description {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.header__description span {
+  color: #c4c4c4;
+}
+
+.header__description p {
+  font-family: var(--font-mo);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #4f4f4f;
+
+  margin-bottom: var(--space-md);
+}
+
+.header img {
+  width: 100%;
+}
+
+/* Info */
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-md);
+  column-gap: var(--space-lg);
+}
+
+.info__element:first-child {
+  flex-basis: 100%;
+}
+
+.info__element {
+  display: flex;
+  align-items: center;
+}
+
+.element__icon {
+  transform: scale(0.8);
+}
+
+.details__title {
+  color: #bdbdbd;
+  font-family: var(--font-mo);
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.details__amount {
+  color: #333333;
+  font-family: var(--font-mo);
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+.orange {
+  color: #f2994a;
+}
+
+/* Ingredients */
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.ingredients h2 {
+  color: #333333;
+  font-family: var(--font-pd);
+  font-size: 1.125rem;
+  font-weight: 700;
+
+  margin-bottom: calc(var(--space-md) * -1);
+}
+
+.ingredients__part {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ingredients__part h3 {
+  color: #333333;
+  font-family: var(--font-pd);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+
+  margin-bottom: var(--space-sm);
+}
+
+.ingredients__part > .ingredient {
+  display: flex;
+  gap: var(--space-xs);
+
+  color: #333333;
+  font-family: var(--font-mo);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Instructions */
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.instructions h2 {
+  color: #333333;
+  font-family: var(--font-pd);
+  font-size: 1.125rem;
+  font-weight: 700;
+
+  margin-bottom: calc(var(--space-md) * -1);
+}
+
+.instruction__step {
+  display: flex;
+  gap: var(--space-xs);
+}
