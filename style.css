@@ -67,13 +67,13 @@ body {
   margin-bottom: var(--space-md);
 }
 
-.header img {
+.header__image img {
   width: 100%;
 }
 
 /* Info */
 
-.info {
+.info__wrapper {
   display: flex;
   flex-wrap: wrap;
   row-gap: var(--space-md);
@@ -196,6 +196,8 @@ body {
   font-weight: 400;
 }
 
+/* Source */
+
 .instructions h3 * {
   color: #bdbdbd;
   font-family: var(--font-mo);
@@ -204,13 +206,123 @@ body {
   font-weight: 400;
 }
 
+/* Footer */
+
 .footer * {
   color: var(--color-footer);
   font-family: var(--font-mo);
   font-size: 0.875rem;
   font-weight: 600;
 
-  padding-bottom: ;
   text-align: center;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1440px) {
+  /* Grid */
+
+  .container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header ."
+      "image image"
+      "ingredients info"
+      "instructions ."
+      "footer footer";
+  }
+  .header__image {
+    grid-area: image;
+  }
+  .info {
+    grid-area: info;
+  }
+  .ingredients {
+    grid-area: ingredients;
+  }
+  .instructions {
+    grid-area: instructions;
+  }
+  .footer {
+    grid-area: footer;
+  }
+
+  /* Header */
+
+  .header {
+    grid-area: header;
+  }
+
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header__description p {
+    font-size: 0.875rem;
+  }
+
+  /* Info */
+
+  .info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .info__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: fit-content;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .element__icon {
+    transform: scale(0.9);
+    margin-right: var(--space-sm);
+  }
+
+  .details__title {
+    font-size: 0.625rem;
+  }
+
+  .details__amount {
+    font-size: 0.875rem;
+  }
+
+  /* Ingredients */
+
+  .ingredients h2 {
+    font-size: 1.5rem;
+  }
+
+  .ingredients__part h3 {
+    font-size: 1.125rem;
+  }
+
+  .ingredients__part .ingredient {
+    font-size: 1rem;
+  }
+
+  .ingredients__part .ingredient input {
+    margin-right: var(--space-sm);
+  }
+
+  /* Instructions */
+
+  .instructions h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Source */
+
+  .instructions h3 * {
+    font-size: 1rem;
+  }
+
+  /* Source */
 }
