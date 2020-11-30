@@ -2,10 +2,10 @@
 
 :root {
   --color-primary: #333333;
-  --color-secondary: #4f4f4f;
   --color-footer: #a9a9a9;
-  --color-font: #000000;
+  --color-title: #000000;
   --color-background: #fafafa;
+  --color-orange: #f2994a;
 
   --font-pd: "Playfair Display", serif;
   --font-mo: "Montserrat", sans-serif;
@@ -26,21 +26,21 @@
 
 body {
   background-color: var(--color-background);
-  color: var(--color-font);
+  color: var(--color-primary);
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  width: 95%;
-  height: 100vh;
-  margin: var(--space-lg) auto;
+  width: 90%;
+  margin: var(--space-md) auto;
 }
 
 /* Header */
 
 .header__title {
+  color: var(--color-title);
   font-family: var(--font-pd);
   font-size: 1.5rem;
   font-weight: 700;
@@ -103,14 +103,13 @@ body {
 }
 
 .details__amount {
-  color: #333333;
   font-family: var(--font-mo);
   font-size: 0.625rem;
   font-weight: 500;
 }
 
 .orange {
-  color: #f2994a;
+  color: var(--color-orange);
 }
 
 /* Ingredients */
@@ -122,7 +121,6 @@ body {
 }
 
 .ingredients h2 {
-  color: #333333;
   font-family: var(--font-pd);
   font-size: 1.125rem;
   font-weight: 700;
@@ -137,7 +135,6 @@ body {
 }
 
 .ingredients__part h3 {
-  color: #333333;
   font-family: var(--font-pd);
   font-size: 1rem;
   font-style: italic;
@@ -146,15 +143,18 @@ body {
   margin-bottom: var(--space-sm);
 }
 
-.ingredients__part > .ingredient {
+.ingredients__part .ingredient {
   display: flex;
   gap: var(--space-xs);
 
-  color: #333333;
   font-family: var(--font-mo);
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
+}
+
+.ingredients__part > .ingredient input[type="checkbox"]:checked + label {
+  color: #bdbdbd;
 }
 
 /* Instructions */
@@ -166,7 +166,6 @@ body {
 }
 
 .instructions h2 {
-  color: #333333;
   font-family: var(--font-pd);
   font-size: 1.125rem;
   font-weight: 700;
@@ -176,5 +175,42 @@ body {
 
 .instruction__step {
   display: flex;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+}
+
+.instruction__step span {
+  color: #ffffff;
+  font-family: var(--font-pd);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  border-radius: 6px;
+  background-color: var(--color-orange);
+  height: max-content;
+  padding: 0px 13px 5px;
+}
+
+.instruction__step p {
+  font-family: var(--font-mo);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.instructions h3 * {
+  color: #bdbdbd;
+  font-family: var(--font-mo);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.footer * {
+  color: var(--color-footer);
+  font-family: var(--font-mo);
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  padding-bottom: ;
+  text-align: center;
+  text-decoration: none;
 }
